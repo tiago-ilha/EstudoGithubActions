@@ -31,8 +31,14 @@ jobs:
     name: "Homologação"
     runs-on: ubuntu-latest
     needs: Release
+    steps:
+      - name: Deploy to Homologação
+        run: echo "Deploying to Homologação"
 
   Producao:
     name: "Produção"
     runs-on: ubuntu-latest
     needs: Homologacao
+    steps:
+      - name: Deploy to Homologação
+        run: echo "Deploying to Homologação"
